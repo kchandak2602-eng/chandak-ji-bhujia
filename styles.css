@@ -1905,7 +1905,59 @@ button {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Add slide-in burger menu in JS, or keep links accessible elsewhere */
+        display: none;
+    }
+    .header-container {
+        padding: 0 1.25rem;
+    }
+    .menu-section, .gifting-section, .heritage-section, .catering-section {
+        padding: 4rem 1.25rem;
+    }
+    .hero-container {
+        padding: 0 1.25rem;
+        gap: 2.5rem;
+    }
+    .hero-image-wrapper {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+    .category-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0.5rem 0.25rem 1rem;
+        margin-bottom: 2rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .category-tabs::-webkit-scrollbar {
+        display: none;
+    }
+    .tab-btn {
+        flex-shrink: 0;
+        padding: 0.6rem 1.25rem;
+    }
+    .gifting-visual-panel {
+        padding: 1.5rem 1rem;
+    }
+    .sweets-selector-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 0.5rem;
+    }
+    .select-sweet-item {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+    .select-sweet-img {
+        width: 28px;
+        height: 28px;
+    }
+    .catering-container {
+        padding: 1.5rem 1rem;
+    }
+    .catering-form-card {
+        padding: 2rem 1.25rem;
     }
     .footer-container {
         grid-template-columns: 1fr;
@@ -1916,5 +1968,17 @@ button {
     }
     .size-options {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .gold-ring-back {
+        display: none;
+    }
+    .floating-card {
+        display: none;
+    }
+    .hero-title {
+        font-size: 2.25rem;
     }
 }
