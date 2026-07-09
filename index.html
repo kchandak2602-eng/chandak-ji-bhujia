@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikaneri Bliss | Premium Traditional Sweets & Savories</title>
+    <meta name="description" content="Experience the rich, authentic heritage of Bikaneri sweets and savories. Handcrafted with pure ghee, premium saffron, and traditional Rajasthani love.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons (loaded dynamically) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Ambient Sparkles & Petals Background -->
+    <div class="ambient-decor" aria-hidden="true" id="ambient-decor"></div>
+
+    <!-- Sticky Glassmorphic Header -->
+    <header class="main-header" id="main-header">
+        <div class="header-container">
+            <a href="#" class="brand-logo" id="brand-logo">
+                <span class="logo-text">Bikaneri <span class="accent-gold">Bliss</span></span>
+            </a>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="#menu" class="nav-item">Sweets & Savories</a>
+                <a href="#gifting" class="nav-item">Custom Gift Box</a>
+                <a href="#heritage" class="nav-item">Our Legacy</a>
+                <a href="#catering" class="nav-item">Royal Catering</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn" id="search-btn" aria-label="Search items">
+                    <i data-lucide="search"></i>
+                </button>
+                <button class="action-btn cart-toggle-btn" id="cart-btn" aria-label="Open Shopping Cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search for Rasgulla, Bhujia, Kaju Katli...">
+            <button id="close-search-btn"><i data-lucide="x"></i></button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tagline">
+                    <span class="gold-line"></span>
+                    ESTABLISHED IN BIKANER
+                </div>
+                <h1 class="hero-title">
+                    Royal Indian Sweets <br>
+                    <span class="italic-gold">Woven in Pure Ghee</span>
+                </h1>
+                <p class="hero-description">
+                    Immerse yourself in authentic Rajasthani taste. From the crisp snap of Bikaneri Bhujia to the melt-in-mouth luxury of Saffron Kaju Katli. Crafted fresh daily.
+                </p>
+                <div class="hero-actions">
+                    <a href="#menu" class="btn btn-primary">Shop Delicacies <i data-lucide="arrow-right"></i></a>
+                    <a href="#gifting" class="btn btn-secondary">Build a Gift Box</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="gold-ring-back spin-slow"></div>
+                <div class="hero-image-wrapper">
+                    <!-- High quality image placeholder will be loaded, or background color-mix will shine -->
+                    <img id="hero-img" src="" alt="Assortment of luxury Bikaneri Sweets" class="hero-main-img">
+                </div>
+                <!-- Interactive floating cards -->
+                <div class="floating-card float-slow" style="top: 15%; left: -10%;">
+                    <div class="float-card-inner">
+                        <i data-lucide="sparkles" class="card-icon"></i>
+                        <div>
+                            <h4>100% Pure Ghee</h4>
+                            <p>Rich, traditional flavor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card float-slower" style="bottom: 20%; right: -5%;">
+                    <div class="float-card-inner">
+                        <i data-lucide="heart" class="card-icon"></i>
+                        <div>
+                            <h4>Bespoke Gifting</h4>
+                            <p>Hand-packed luxury boxes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Banner -->
+    <div class="marquee-banner">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>Handcrafted in Bikaner</span> <i data-lucide="sparkles"></i>
+                <span>Pure Desi Ghee Preparation</span> <i data-lucide="sparkles"></i>
+                <span>All India Express Delivery</span> <i data-lucide="sparkles"></i>
+                <span>Wedding & Corporate Gifting</span> <i data-lucide="sparkles"></i>
+                <span>Handcrafted in Bikaner</span> <i data-lucide="sparkles"></i>
+                <span>Pure Desi Ghee Preparation</span> <i data-lucide="sparkles"></i>
+                <span>All India Express Delivery</span> <i data-lucide="sparkles"></i>
+                <span>Wedding & Corporate Gifting</span> <i data-lucide="sparkles"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="section-header">
+            <span class="sub-title">OUR SPECIFICATION</span>
+            <h2 class="section-title">Explore Our Royal Menu</h2>
+            <div class="gold-divider"></div>
+        </div>
+
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">All Delights</button>
+            <button class="tab-btn" data-category="sweets">Pure Ghee Sweets</button>
+            <button class="tab-btn" data-category="savories">Signature Savories</button>
+            <button class="tab-btn" data-category="gifts">Luxurious Assortments</button>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+            <!-- Products will be loaded dynamically via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Interactive Gift Box Customizer -->
+    <section class="gifting-section" id="gifting">
+        <div class="gifting-container">
+            <div class="gifting-visual-panel">
+                <div class="box-preview-container">
+                    <h3 class="box-title">Your Custom Assortment Box</h3>
+                    <p class="box-subtitle">Drag or click sweets on the right to fill this box</p>
+                    
+                    <div class="interactive-box-wrapper">
+                        <!-- Sweets box layout dynamically rendered here -->
+                        <div class="box-grid grid-9" id="box-grid">
+                            <!-- Slots will be rendered here -->
+                        </div>
+                    </div>
+
+                    <div class="box-status-bar">
+                        <span id="box-status-text">Box Capacity: 0 / 9 Pieces</span>
+                        <div class="status-progress-track">
+                            <div class="status-progress-fill" id="status-progress-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gifting-selection-panel">
+                <span class="sub-title">LUXURY GIFTING SUITE</span>
+                <h2 class="panel-title">Bespoke Sweet Box Creator</h2>
+                <p class="panel-description">
+                    Curate a customized gift box. Choose your size, fill it with your favorite signature sweets, select a premium wrapping, and we'll ship it in our velvet-embossed box.
+                </p>
+
+                <!-- Box Size Selection -->
+                <div class="config-group">
+                    <label class="config-label">1. Choose Box Size</label>
+                    <div class="size-options">
+                        <button class="size-opt-btn" data-size="4">
+                            <span class="size-title">Imperial Quad</span>
+                            <span class="size-desc">4 Premium Sweets</span>
+                        </button>
+                        <button class="size-opt-btn active" data-size="9">
+                            <span class="size-title">Royal Nonet</span>
+                            <span class="size-desc">9 Premium Sweets</span>
+                        </button>
+                        <button class="size-opt-btn" data-size="16">
+                            <span class="size-title">Maharaja Festive</span>
+                            <span class="size-desc">16 Premium Sweets</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sweets Selector Grid -->
+                <div class="config-group">
+                    <label class="config-label">2. Select Sweets to Add</label>
+                    <div class="sweets-selector-grid" id="sweets-selector-grid">
+                        <!-- Fill list of sweets dynamically -->
+                    </div>
+                </div>
+
+                <!-- Box Summary & Action -->
+                <div class="box-summary-action">
+                    <div class="box-price-details">
+                        <span class="price-lbl">Assortment Subtotal</span>
+                        <span class="price-val" id="custom-box-price">₹450</span>
+                    </div>
+                    <button class="btn btn-primary" id="add-box-to-cart-btn" disabled>
+                        <i data-lucide="gift"></i> Add Custom Box to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage & Story Section -->
+    <section class="heritage-section" id="heritage">
+        <div class="heritage-container">
+            <div class="heritage-image-block">
+                <div class="heritage-img-glow"></div>
+                <div class="heritage-img-frame">
+                    <img id="heritage-img" src="" alt="Preparing traditional sweets in copper vessels" class="heritage-main-img">
+                </div>
+            </div>
+            
+            <div class="heritage-text-block">
+                <span class="sub-title">OUR STORY</span>
+                <h2 class="heritage-title">Four Generations of Sweet Perfection</h2>
+                <div class="gold-divider-left"></div>
+                <p class="heritage-description">
+                    Born in the heart of Bikaner, Rajasthan, Bikaneri Bliss was founded on the promise of uncompromising purity. We use water from regional aquifers, pure buffalo ghee churned at dawn, and local spices ground by hand on traditional stone mills (Sil-Batta).
+                </p>
+                <p class="heritage-description">
+                    Every batch of our legendary Rasgulla and spicy Bikaneri Bhujia is overseen by master halwais, maintaining the precise temperatures and timings passed down through generations.
+                </p>
+                <div class="heritage-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">1932</span>
+                        <span class="stat-lbl">Heritage Rooted</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-lbl">Pure Buffalo Ghee</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">50+</span>
+                        <span class="stat-lbl">Secret Recipes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering Inquiry / Custom Requests -->
+    <section class="catering-section" id="catering">
+        <div class="catering-overlay-background"></div>
+        <div class="catering-container">
+            <div class="catering-text">
+                <span class="sub-title">ROYAL OCCASIONS</span>
+                <h2>Catering for Weddings, Festivals & Corporate Gifting</h2>
+                <p>
+                    Let the rich aroma of pure ghee sweets and royal hospitality grace your special event. From customized packaging with your wedding insignia to live sweet-making counters by expert Halwais from Bikaner.
+                </p>
+                <div class="catering-features">
+                    <div class="feat"><i data-lucide="check-circle"></i> Bespoke Wedding Platters</div>
+                    <div class="feat"><i data-lucide="check-circle"></i> Live Jalebi & Rabdi Counters</div>
+                    <div class="feat"><i data-lucide="check-circle"></i> Personalized Logo Embossing</div>
+                    <div class="feat"><i data-lucide="check-circle"></i> All India Venue Logistics</div>
+                </div>
+            </div>
+
+            <div class="catering-form-card">
+                <h3>Request Royal Catering Proposal</h3>
+                <form id="catering-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="c-name">Full Name</label>
+                            <input type="text" id="c-name" placeholder="Maharaja/Maharani Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-phone">Phone Number</label>
+                            <input type="tel" id="c-phone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="c-email">Email Address</label>
+                        <input type="email" id="c-email" placeholder="name@royalty.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="c-event">Occasion Type</label>
+                            <select id="c-event">
+                                <option value="wedding">Royal Wedding</option>
+                                <option value="festival">Festive Celebration (Diwali/Holi)</option>
+                                <option value="corporate">Corporate Gala & Gifting</option>
+                                <option value="other">Bespoke Gathering</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-guests">Expected Guests</label>
+                            <input type="number" id="c-guests" placeholder="e.g. 500" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="c-notes">Additional Requests</label>
+                        <textarea id="c-notes" rows="3" placeholder="Tell us about sweet selections, packaging theme, or live-counter requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Request Consultation <i data-lucide="send"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide-out Shopping Cart Drawer -->
+    <div class="cart-drawer-backdrop" id="cart-backdrop"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Selection</h3>
+            <button class="close-cart-btn" id="close-cart-btn" aria-label="Close cart"><i data-lucide="x"></i></button>
+        </div>
+
+        <div class="cart-drawer-content" id="cart-drawer-content">
+            <!-- Cart items will be generated dynamically here -->
+            <div class="cart-empty-state" id="cart-empty-state">
+                <i data-lucide="shopping-bag" class="empty-icon"></i>
+                <p>Your bag of delights is currently empty.</p>
+                <a href="#menu" class="btn btn-secondary close-cart-link">Browse Delicacies</a>
+            </div>
+            
+            <div class="cart-items-list" id="cart-items-list">
+                <!-- Cart items dynamically rendered -->
+            </div>
+        </div>
+
+        <div class="cart-drawer-footer" id="cart-drawer-footer">
+            <div class="cart-totals">
+                <div class="total-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">₹0</span>
+                </div>
+                <div class="total-row tax-row">
+                    <span>GST (5%)</span>
+                    <span id="cart-gst">₹0</span>
+                </div>
+                <div class="total-row grand-total">
+                    <span>Total Amount</span>
+                    <span id="cart-grandtotal">₹0</span>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkout-btn">
+                Proceed to Royal Checkout <i data-lucide="credit-card"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Product Detail Modal -->
+    <div class="product-modal-backdrop" id="modal-backdrop"></div>
+    <div class="product-modal" id="product-modal">
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal"><i data-lucide="x"></i></button>
+        <div class="modal-grid">
+            <div class="modal-visual">
+                <img id="modal-product-img" src="" alt="Product Detail Image">
+            </div>
+            
+            <div class="modal-info">
+                <span class="modal-cat-badge" id="modal-product-cat">Pure Ghee Sweet</span>
+                <h3 class="modal-product-title" id="modal-product-title">Royal Saffron Kaju Katli</h3>
+                
+                <div class="modal-rating-price">
+                    <div class="rating-stars" id="modal-product-rating">
+                        <i data-lucide="star" class="fill-gold"></i>
+                        <span class="rating-val">4.9 (124 Reviews)</span>
+                    </div>
+                    <span class="modal-product-price" id="modal-product-price">₹350 <span class="wt-suffix">/ 250g</span></span>
+                </div>
+
+                <p class="modal-product-description" id="modal-product-desc">
+                    Made from premium cashew nuts and flavored with organic Kashmiri saffron threads. Adorned with delicate, pure silver foil (Vark). Melt in mouth perfection.
+                </p>
+
+                <!-- Box Pack Selection -->
+                <div class="pack-size-selector">
+                    <label class="selector-lbl">Select Pack Size</label>
+                    <div class="pack-size-options">
+                        <button class="pack-size-btn active" data-multiplier="1" data-label="250g">250g Box</button>
+                        <button class="pack-size-btn" data-multiplier="2" data-label="500g">500g Box</button>
+                        <button class="pack-size-btn" data-multiplier="4" data-label="1kg">1kg Box</button>
+                    </div>
+                </div>
+
+                <!-- Product Specifications -->
+                <div class="product-specs">
+                    <div class="spec-tab">
+                        <span class="spec-lbl">Ingredients</span>
+                        <span class="spec-val" id="modal-product-ingredients">Cashews, Saffron, Sugar, Cardamom, Pure Ghee, Silver Foil</span>
+                    </div>
+                    <div class="spec-tab">
+                        <span class="spec-lbl">Shelf Life</span>
+                        <span class="spec-val" id="modal-product-shelflife">15 Days (Store in cool, dry place)</span>
+                    </div>
+                </div>
+
+                <div class="modal-add-to-cart-section">
+                    <div class="qty-counter">
+                        <button id="modal-qty-minus"><i data-lucide="minus"></i></button>
+                        <span id="modal-qty-val">1</span>
+                        <button id="modal-qty-plus"><i data-lucide="plus"></i></button>
+                    </div>
+                    <button class="btn btn-primary" id="modal-add-to-cart-btn">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Alert / Toast Notification -->
+    <div class="toast-notification" id="toast-notification">
+        <i data-lucide="shopping-bag" class="toast-icon"></i>
+        <span class="toast-message" id="toast-message">Added to cart successfully!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand-column">
+                <h3>Bikaneri <span>Bliss</span></h3>
+                <p>Bringing you the authentic taste of royal Bikaneri sweets since 1932. Pure Ghee. Rich Heritage. Love from Rajasthan.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#menu">Royal Menu</a></li>
+                    <li><a href="#gifting">Custom Gift Boxes</a></li>
+                    <li><a href="#heritage">Our Heritage</a></li>
+                    <li><a href="#catering">Catering Request</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return & Refund</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter-column">
+                <h4>Royal Newsletter</h4>
+                <p>Subscribe to receive exclusive festive discounts and taste-testing event invites.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Your royal email address" required>
+                    <button type="submit" aria-label="Subscribe"><i data-lucide="arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2026 Bikaneri Bliss. All Rights Reserved. Crafted with traditional love.</p>
+        </div>
+    </footer>
+
+    <!-- App Logic script -->
+    <script src="app.js"></script>
+</body>
+</html>
