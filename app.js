@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Bikaneri Bliss - Application Logic
+   Chandak Ji - Application Logic
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -509,7 +509,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Checkout simulate
     DOM.checkoutBtn.addEventListener("click", () => {
-        showToast("Processing Order... Order simulation successful! Enjoy Bikaneri Bliss.");
+        showToast("Processing Order... Order simulation successful! Enjoy Chandak Ji.");
         state.cart = [];
         toggleCart(false);
         renderCart();
